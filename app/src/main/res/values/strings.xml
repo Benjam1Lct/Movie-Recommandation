@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">AppliSAE</string>
+    <string-array name="sort_options">
+        <item>Titre (A → Z)</item>
+        <item>Date de sortie (plus récent)</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="BottomNavIndicator" parent="">
+        <item name="android:colorBackground">#FFFFFF</item> <!-- Couleur du petit cercle -->
+    </style>
+
+    <style name="BottomNavIndicatorShape" parent="ShapeAppearance.Material3.Corner.Full">
+        <item name="cornerSize">50%</item> <!-- Cercle -->
+    </style>
+
+</resources>

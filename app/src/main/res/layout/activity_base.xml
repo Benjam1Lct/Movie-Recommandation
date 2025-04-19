@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Layout de base utilisé comme template commun à toutes les activités.
+    Contient un container principal (FrameLayout) pour injecter des vues dynamiquement,
+    et une barre de navigation fixe en bas de l'écran.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#070421">
+
+    <!--
+        Container principal dans lequel le contenu spécifique à chaque activité est injecté.
+        (Voir BaseActivity.kt → setContentView())
+    -->
+    <FrameLayout
+        android:id="@+id/base_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <!--
+        Barre de navigation inférieure avec icônes et styles personnalisés.
+        Elle utilise un menu défini dans res/menu/bottom_nav_menu.xml
+        Les styles d’icône active sont définis dans styles.xml avec BottomNavIndicator.
+    -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_background_bright_borderless"
+        android:elevation="8dp"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_menu"
+        app:itemActiveIndicatorStyle="@style/BottomNavIndicator"
+        />
+</LinearLayout>

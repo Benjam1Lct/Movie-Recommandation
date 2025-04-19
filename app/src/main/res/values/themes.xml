@@ -1,0 +1,10 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.AppliSAE" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:statusBarColor">#070421</item> <!-- arriere plan violet sous la barre de statut-->
+        <item name="android:windowLightStatusBar">false</item> <!-- on enleve la statut barre light -->
+        <item name="android:fontFamily">@font/ibm_plex_sans</item> <!-- on applique une font par defaut -->
+    </style>
+
+    <style name="Theme.AppliSAE" parent="Base.Theme.AppliSAE" />
+</resources>

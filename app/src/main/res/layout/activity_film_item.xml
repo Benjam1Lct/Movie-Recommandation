@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Layout pour un élément de la liste de films.
+    Affiche l'affiche (poster), le titre et l’année de sortie.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_color_selector"
+    android:orientation="horizontal"
+    android:padding="12dp">
+
+    <!-- Image d'affiche du film -->
+    <ImageView
+        android:id="@+id/item_image"
+        android:layout_width="80dp"
+        android:layout_height="120dp"
+        android:scaleType="centerCrop" />
+
+    <!-- Zone texte : titre + année -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingStart="12dp">
+
+        <!-- Titre du film -->
+        <TextView
+            android:id="@+id/item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Titre"
+            android:textColor="@drawable/text_color_selector"
+            android:textStyle="bold"
+            android:textSize="16sp" />
+
+        <!-- Année de sortie -->
+        <TextView
+            android:id="@+id/item_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2024"
+            android:textColor="@drawable/text_color_selector"
+            android:layout_marginTop="4dp" />
+    </LinearLayout>
+</LinearLayout>

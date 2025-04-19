@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Base.Theme.AppliSAE" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:statusBarColor">#070421</item> <!-- fond noir -->
+        <item name="android:windowLightStatusBar">false</item> <!-- texte blanc -->
+        <item name="android:fontFamily">@font/ibm_plex_sans</item>
+        <item name="android:windowSplashScreenBackground">#070421</item>
+
+    </style>
+</resources>

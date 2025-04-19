@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+    Layout utilisé pour un élément d’image dans le carrousel horizontal.
+    Affiche une image plein écran avec un fond arrondi.
+-->
+<ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/carousel_image"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scaleType="centerCrop"
+    android:gravity="top"
+    android:adjustViewBounds="false"
+    android:background="@drawable/rounded_background" />

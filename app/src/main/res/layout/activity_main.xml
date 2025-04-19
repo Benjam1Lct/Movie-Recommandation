@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Layout de l'écran de recherche principal.
+    Contient :
+    - Un champ pour le titre du film
+    - Un champ pour l'année de sortie
+    - Un Spinner pour choisir un genre
+    - Une SeekBar pour choisir le nombre de résultats
+    - Un bouton pour lancer la recherche
+-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#070421">
+
+    <!-- Contrainte principale contenant les éléments du formulaire -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp"
+        tools:context=".MainActivity">
+
+        <!-- Affiche dynamiquement la valeur sélectionnée sur la SeekBar -->
+        <LinearLayout
+            android:id="@+id/nbrfilm"
+            android:layout_width="363dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/seekBar_nbre">
+
+            <TextView
+                android:id="@+id/textView_nombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="25"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <!-- Champ de texte pour saisir le titre du film -->
+        <EditText
+            android:id="@+id/edit_nomfilm"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/rounded_input"
+            android:hint="Titre du film"
+            android:paddingHorizontal="16dp"
+            android:textColor="#ffffff"
+            android:textColorHint="#DDDDDD"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Champ de texte pour entrer une année -->
+        <EditText
+            android:id="@+id/edit_date"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/rounded_input"
+            android:hint="Année de sortie"
+            android:paddingHorizontal="16dp"
+            android:textColor="#ffffff"
+            android:textColorHint="#DDDDDD"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_nomfilm" />
+
+        <!-- SeekBar pour définir le nombre de films à afficher -->
+        <SeekBar
+            android:id="@+id/seekBar_nbre"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="28dp"
+            android:max="50"
+            android:progress="25"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinner_genre" />
+
+        <!-- Spinner pour sélectionner un genre de film -->
+        <Spinner
+            android:id="@+id/spinner_genre"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="28dp"
+            android:paddingStart="10dp"
+            android:background="@drawable/rounded_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_date" />
+
+        <!-- Bouton pour lancer la recherche de films -->
+        <Button
+            android:id="@+id/button_valider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FFFFFF"
+            android:fontFamily="@font/anton"
+            android:paddingVertical="15dp"
+            android:text="Rechercher"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nbrfilm"
+            app:layout_constraintVertical_bias="0.209" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>
+
+
