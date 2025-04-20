@@ -1,0 +1,10 @@
+version: '3'
+services:
+  android:
+    image: budtmo/docker-android-x86-8.1
+    ports:
+      - "6080:6080"
+    environment:
+      - DEVICE=Samsung Galaxy S6
+      - WEB_VNC=true
+    shm_size: 2g
